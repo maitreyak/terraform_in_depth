@@ -4,6 +4,7 @@ resource "aws_instance" "ec2" {
   instance_type = var.instance_type
   count = var.instance_count
   tags = merge(var.tags, { Name="${var.name_prefix}-instance"})
+  iam_instance_profile = aws_iam_instance_profile.main.name
 }
 
 resource "aws_iam_role" "main" {
