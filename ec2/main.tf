@@ -15,3 +15,8 @@ resource "aws_iam_instance_profile" "main" {
   name = aws_iam_role.main.name
   role = aws_iam_role.main.name
 }
+
+resource "aws_iam_role_policy_attachment" "main" {
+  policy_arn = data.aws_iam_policy.ssm_arn.arn
+  role       = aws_iam_role.main.name
+}

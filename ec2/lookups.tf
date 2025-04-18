@@ -36,3 +36,7 @@ data "aws_iam_policy_document" "instance_assume_role_policy" {
     }
   }
 }
+
+data "aws_iam_policy" "ssm_arn" {
+  arn = "arn:aws:iam::aws:policy/AmazonSSMManagedEC2InstanceDefaultPolicy"
+}
