@@ -13,6 +13,7 @@ data "aws_subnets" "default" {
 module "test_instance" {
   source    = "../"
   subnet_id = data.aws_subnets.default.ids[0]
+  name_prefix = "mait"
 }
 
 output "aws_instance_arn" {
