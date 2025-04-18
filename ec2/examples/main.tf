@@ -15,6 +15,7 @@ module "test_instance" {
   subnet_id = data.aws_subnets.default.ids[0]
   name_prefix = "mait"
   instance_count = 1
+  tags = {"BillingGroup" = "mait-ec2"}
 }
 
 output "aws_instance_arn" {
