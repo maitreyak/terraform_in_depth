@@ -24,4 +24,8 @@ variable "tags" {
   default = {}
 }
 
+variable "instance_count" {
+  type = number
+}
+
 

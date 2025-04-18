@@ -14,8 +14,13 @@ module "test_instance" {
   source    = "../"
   subnet_id = data.aws_subnets.default.ids[0]
   name_prefix = "mait"
+  instance_count = 5
 }
 
 output "aws_instance_arn" {
   value = module.test_instance.aws_instance_arn
+}
+
+output "aws_instance_ip" {
+  value = module.test_instance.aws_instance_ip
 }
