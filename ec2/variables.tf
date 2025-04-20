@@ -8,7 +8,7 @@ variable "aws_profile" {
 
 variable "instance_type" {
   type = string
-  default = "t2.micro"
+  default = "t4g.micro"
 }
 
 variable "subnet_id" {
