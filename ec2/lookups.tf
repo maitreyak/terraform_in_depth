@@ -1,5 +1,5 @@
 data "aws_vpc" "default" {
-  default = true
+  id = "vpc-07f03b51c083e364a"
 }
 
 data "aws_ami" "ubuntu" {
@@ -20,6 +20,9 @@ data "aws_subnets" "default"{
   filter {
     name = "vpc-id"
     values = [data.aws_vpc.default.id]
+  }
+  tags = {
+    Name = "project-subnet-public1-us-east-1a"
   }
 }
 
